@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Johan Poul Gonzalez</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div> <!-- Fondo de partículas animado -->
+    
+    <header>
+        <img src="yo.jpg" alt="Foto de Johan" class="foto-perfil">
+        <h1>Johan Poul Gonzalez</h1>
+        <p>Auxiliar en Asistencia y Soporte de Tecnologías de la Información</p>
+    </header>
+
+    <main>
+        <section class="sobre-mi">
+            <h2>Sobre Mí</h2>
+            <p>Soy un técnico laboral recién graduado con habilidades en soporte técnico, resolución de problemas y asistencia en TI. Apasionado por la tecnología y comprometido con ofrecer soluciones efectivas.</p>
+        </section>
+
+        <section class="cv">
+            <h2>Hoja de Vida</h2>
+            <button onclick="mostrarCV()">Ver mi CV</button>
+            <div id="cv-contenido">
+                <p><strong>Nombre:</strong> Johan Poul Gonzalez</p>
+                <p><strong>Educación:</strong> Auxiliar en Asistencia y Soporte de TI - Universitaria de Colombia - 2025</p>
+                <p><strong>Habilidades:</strong> 
+                    <ul>
+                        <li>Soporte técnico y mantenimiento de equipos</li>
+                        <li>Resolución de problemas técnicos</li>
+                        <li>Atención al cliente</li>
+                        <li>Conocimientos básicos de redes</li>
+                    </ul>
+                </p>
+                <p><strong>Experiencia:</strong> Prácticas en IMPACTO WEB LTDA - 09/04/2024 hasta 9/10/2024</p>
+                <p><strong>Contacto:</strong> <a href="mailto:[email&#160;protected]">hortapoul07@icloud.com</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contacto: <a href="mailto:[email&#160;protected]">hortapoul07@icloud.com</a></p>
+        <p>Instagram: <a href="https://instagram.com/__mcfella" target="_blank">_mcfella</a></p>
+        <p>© 2025 Johan Poul Gonzalez - Todos los derechos reservados</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+// script.js
+// Función para mostrar/ocultar CV
+function mostrarCV() {
+    const contenido = document.getElementById("cv-contenido");
+    if (contenido.style.display === "none" || contenido.style.display === "") {
+        contenido.style.display = "block";
+    } else {
+        contenido.style.display = "none";
+    }
+}
+
+// Configuración de Particles.js
+particlesJS("particles-js", {
+    "particles": {
+        "number": {
+            "value": 80,
+            "density": {
+                "enable": true,
+                "value_area": 800
+            }
+        },
+        "color": {
+            "value": "#FFD700"
+        },
+        "shape": {
+            "type": "circle"
+        },
+        "opacity": {
+            "value": 0.5,
+            "random": true
+        },
+        "size": {
+            "value": 3,
+            "random": true
+        },
+        "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#FFD700",
+            "opacity": 0.4,
+            "width": 1
+        },
+        "move": {
+            "enable": true,
+            "speed": 2,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out"
+        }
+    },
+    "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+            "onhover": {
+                "enable": true,
+                "mode": "repulse"
+            },
+            "onclick": {
+                "enable": true,
+                "mode": "push"
+            }
+        }
+    },
+    "retina_detect": true
+});
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    position: relative;
+    overflow-x: hidden;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ffffff, #f0f0f0);
+    z-index: -1;
+}
+
+header {
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    padding: 40px 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    animation: fadeIn 1s ease-in;
+}
+
+.foto-perfil {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.foto-perfil:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    color: #fff;
+    margin: 15px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+h2 {
+    color: #FFD700;
+    border-bottom: 2px solid #FFD700;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.sobre-mi, .cv {
+    background: rgba(255, 255, 255, 0.9);
+    margin: 20px 0;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    animation: slideUp 0.8s ease-out;
+}
+
+button {
+    background: #FFD700;
+    color: #333;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #FFA500;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#cv-contenido {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 8px;
+    text-align: left;
+    animation: fadeIn 0.5s ease-in;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 5px 0;
+    position: relative;
+}
+
+ul li:before {
+    content: "✓";
+    color: #FFD700;
+    margin-right: 10px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
